@@ -18,9 +18,9 @@
   ansible.builtin.replace:
     path: /var/www/html/wp-config.php 
     regexp: "{{ item.regexp }}"
-    replace: "{{ item.line }}"
+    replace: "{{ item.replace }}"
   loop:
-    - { regexp: '^localhost', line: "terraform-2021111712312806990000000c.cdqpbjkethv0.us-east-1.rds.amazonaws.com" }
-    - { regexp: '^username_here', line: "david" }
-    - { regexp: '^database_name_here', line: "wordpressdb" }
-    - { regexp: '^password_here', line: "devopspblproject" }
+    - { regexp: '^localhost', replace: "terraform-2021111712312806990000000c.cdqpbjkethv0.us-east-1.rds.amazonaws.com" }
+    - { regexp: '^username_here', replace: "david" }
+    - { regexp: '^database_name_here', replace: "wordpressdb" }
+    - { regexp: '^password_here', replace: "devopspblproject" }
