@@ -17,11 +17,11 @@
   ansible.builtin.replace:
     path: /var/www/html/functions.php
     regexp: "{{ item.regexp }}"
-    replace: "{{ item.line }}"
+    replace: "{{ item.replace }}"
   loop:
-    - { regexp: '^mysql.tooling.svc.cluster.local', line: "terraform-2021111712312806990000000c.cdqpbjkethv0.us-east-1.rds.amazonaws.com" }
-    - { regexp: '^admin', line: "david" }
-    - { regexp: '^tooling', line: "toolingdb" }
-    - { regexp: '^admin', line: "devopspblproject" }
+    - { regexp: '^mysql.tooling.svc.cluster.local', replace: "terraform-2021111712312806990000000c.cdqpbjkethv0.us-east-1.rds.amazonaws.com" }
+    - { regexp: '^admin', replace: "david" }
+    - { regexp: '^tooling', replace: "toolingdb" }
+    - { regexp: '^admin', replace: "devopspblproject" }
 
 
