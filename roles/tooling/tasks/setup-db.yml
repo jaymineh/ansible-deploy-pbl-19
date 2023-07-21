@@ -5,8 +5,8 @@
     
 - name: create database
   community.mysql.mysql_db:
-    login_host: "terraform-2022022809535251560000000c.cbbd5xznkze8.us-east-1.rds.amazonaws.com"
-    login_user: "taiwo"
+    login_host: "terraform-2023072119483404040000000d.cr4my0ebv4lx.us-east-1.rds.amazonaws.com"
+    login_user: "admin"
     login_password: "password"
     name: toolingdb
     collation: utf8_general_ci
@@ -19,8 +19,8 @@
     regexp: "{{ item.regexp }}"
     replace: "{{ item.replace }}"
   loop:
-    - { regexp: '^mysql.tooling.svc.cluster.local', replace: "terraform-2022022809535251560000000c.cbbd5xznkze8.us-east-1.rds.amazonaws.com" }
-    - { regexp: '^admin', replace: "taiwo" }
+    - { regexp: '^mysql.tooling.svc.cluster.local', replace: "terraform-2023072119483404040000000d.cr4my0ebv4lx.us-east-1.rds.amazonaws.com" }
+    - { regexp: '^admin', replace: "admin" }
     - { regexp: '^tooling', replace: "toolingdb" }
     - { regexp: '^admin', replace: "password" }
 
