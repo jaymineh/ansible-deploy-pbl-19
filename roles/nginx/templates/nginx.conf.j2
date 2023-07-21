@@ -36,14 +36,14 @@ http {
         listen       443 http2 ssl;
         listen       [::]:443 http2 ssl;
         root          /var/www/html;
-        server_name  *.projectaws.xyz;
+        server_name  *.constanet.wip.la;
         
         
      
         
         ssl_certificate /etc/ssl/certs/ACS.crt;
         ssl_certificate_key /etc/ssl/private/ACS.key;
-        ssl_dhparam /etc/ssl/certs/dhparam.pem;
+        ssl_dhparam /etc/ssl/certs/Jemine-EC5.pem;
 
       
         location /healthstatus {
@@ -54,7 +54,7 @@ http {
          
         location / {
             proxy_set_header             Host $host;
-            proxy_pass                    https://internal-ialb-1108173875.us-east-1.elb.amazonaws.com/; 
+            proxy_pass                    https://internal-ialb-1151757120.us-east-1.elb.amazonaws.com/; 
            }
     }
 }
